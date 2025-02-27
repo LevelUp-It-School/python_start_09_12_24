@@ -124,3 +124,15 @@ from datetime import datetime
 # Найти ближайший день когда следующая пятница 13.
 ####
 # Сколько тебе миллисекунд? Напиши программу, которая считает сколько миллисекунд прошло с твоего рождения
+today = date.today()
+month = today.month
+year = today.year
+while True:
+    day_x = date(year, month, 13)
+    if day_x.weekday() == 4:
+        return day_x
+    month+=1
+    if month > 12:
+        month =1
+        year +=1
+
